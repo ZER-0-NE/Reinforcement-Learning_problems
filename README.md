@@ -2,4 +2,5 @@
 
 ### 1. CartPole
 
-<img src="https://imgur.com/AyyyuxI" width="400" height="400">
+![cartpole](https://imgur.com/AyyyuxI)
+
