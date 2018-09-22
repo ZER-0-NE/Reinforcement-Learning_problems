@@ -2,4 +2,4 @@
 
 ### 1. CartPole
 
-![cartpole](https://github.com/ZER-0-NE/Reinforcement-Learning_problems/blob/master/assests/cartpole1.gif){:height="50%" width="50%"}
+<img src="https://github.com/ZER-0-NE/Reinforcement-Learning_problems/blob/master/assests/cartpole1.gif" width="400" height="400">
