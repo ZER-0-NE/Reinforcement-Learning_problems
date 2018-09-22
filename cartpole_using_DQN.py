@@ -16,7 +16,6 @@
 # epsilon - aka exploration rate, this is the rate in which an agent randomly decides its action rather than prediction.
 # epsilon_decay - we want to decrease the number of explorations as it gets good at playing games.
 # epsilon_min - we want the agent to explore at least this amount.
-# learning_rate - Determines how much neural net learns in each iteration.
 
 
 #!pip install gym
