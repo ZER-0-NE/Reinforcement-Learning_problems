@@ -2,5 +2,5 @@
 
 ### 1. CartPole
 
-![cartpole](https://imgur.com/AyyyuxI)
+![cartpole](assets/cartpole1.gif)
 
