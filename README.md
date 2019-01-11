@@ -51,5 +51,5 @@ Make sure to have gym installed in your system. (``` pip install gym ```)
 
 Below is how the training process looks like:
 
-![cartpole](https://imgur.com/AyyyuxI)
+![cartpole](assets/cartpole1.gif)
 
