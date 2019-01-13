@@ -81,6 +81,10 @@ HFFG       (G: goal, where the frisbee is located)
 The episode ends when you reach the goal or fall in a hole. You receive a reward of 1 if
 you reach the goal and zero otherwise.
 
+**Hence, we need an algorithm which learns long term expected rewards.**
+
+The **Q-Learning algorithm**, in its simplest implementation, is a table of values for every state(row) and action(column) in an environment. Within each cell of the table, we learn how good it is for an agent to take a given action within a given state.
+
 ![FrozenLake](/assets/frozenlake.png)
 
 #### Parameters:
