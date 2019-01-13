@@ -83,7 +83,10 @@ you reach the goal and zero otherwise.
 
 **Hence, we need an algorithm which learns long term expected rewards.**
 
-The **Q-Learning algorithm**, in its simplest implementation, is a table of values for every state(row) and action(column) in an environment. Within each cell of the table, we learn how good it is for an agent to take a given action within a given state.
+The **Q-Learning algorithm**, in its simplest implementation, is a table of values for every state(row) and action(column) in an environment. Within each cell of the table, we learn how good it is for an agent to take a given action within a given state. In FrozenLake environment, we have 16 possible states(one for each block), and 4 possible actions(the four directions of movement), giving us a 16x4 table of values.
+
+We start by initializing the table uniformly with all zeros, and then as we observe the rewards we obtain for various actions, we update the table accordingly.
+We make updates to our Q-table using the **Bellman equation**, which states that **the expected long-term reward for a given action is equal to the immediate reward from the current action combined with the expected reward from the best future action taken at the following state**.
 
 ![FrozenLake](/assets/frozenlake.png)
 
@@ -93,3 +96,4 @@ The **Q-Learning algorithm**, in its simplest implementation, is a table of valu
 - epsilon - aka exploration rate, this is the rate in which an agent randomly decides its action rather than prediction.
 - epsilon_decay - we want to decrease the number of explorations as it gets good at playing games.
 - epsilon_min - we want the agent to explore at least this amount.
+
