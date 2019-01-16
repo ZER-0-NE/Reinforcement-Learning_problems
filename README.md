@@ -8,13 +8,29 @@ The **OpenAI gym** provides many standard environments for people to test their 
 **All reinforcement learning algorithms tend to maximize the reward over its whole time of learning. But how an agent chooses an action to maximize the reward varies differently and there are several approaches.**
 
 We need to successfully balance the  **exploration** and
-**exploitation** tradeoff. 
+**exploitation** tradeoff. Ideally, an approach should encourage exploration until the point it has learned enough about it to make informed decisions in the environment by taking optimal actions.
 
 In order for an agent to learn how to deal optimally with all possible states in an environment, it must be exposed to as many of those states as possible. This can be thought of as exploring all the possible states in any environment. Once an agent has explored enough, it can exploit its experience to maximize the final reward.
 
 Hence, an agent, in this case, explores and then exploits.
 But **this is not the case always.**
 
+Some of the common methods of exploration are listed out below along with their implementation. (Thanks to [Arthur](https://medium.com/@awjuliani))
+
+
+#### 1. Greedy Approach:
+It is a naive method which simply chooses that optimal action which leads to greatest reward from the agent.
+
+Taking the action which the agent estimates at the current moment to be the best is an example of exploitation: the agent is exploiting it's current knowledge about the reward structure of the environment to act.
+
+**Implementation**:
+```
+# Q_out is the acivation from the final layer of Q-network.
+Q_value = sess.run(Q_out, feed_dict={inputs:[state]})
+action = np.argmax(Q_value)
+```
+
+![Greedy](/assets/greedy_exp.png)
 
 ### 1. CartPole
 #### Description:
@@ -52,6 +68,8 @@ Make sure to have gym installed in your system. (``` pip install gym ```)
 Below is how the training process looks like:
 
 ![cartpole](assets/cartpole1.gif)
+
+
 
 ### 2. Frozen Lake:
 #### Description:
