@@ -35,7 +35,7 @@ action = np.argmax(Q_value)
 In the above figure, each value corresponds to the Q-value for a given action at a random state in an environment. The height of the light blue bar corresponds to the probability of choosing a given action. The dark blue bar corresponds to a chosen action.
 
 
-#### 1. Random Approach:
+#### 2. Random Approach:
 The opposite to the greedy approach is to always take a random action.
 
 **Implementation**:
@@ -49,6 +49,26 @@ action = np.random.randint(0, total_actions)
 ![Greedy](/assets/random_exp.png)
 
 In the above figure, each value corresponds to the Q-value for a given action at a random state in an environment. The height of the light blue bar corresponds to the probability of choosing a given action. The dark blue bar corresponds to a chosen action.
+
+#### 3. ϵ-greedy Approach:
+A simple combination of the greedy and random approaches yields one of the most used exploration strategies: ϵ-greedy. In this approach the agent chooses what it believes to be the optimal action most of the time, but occasionally acts randomly. This way the agent takes actions which it may not estimate to be ideal, but may provide new information to the agent. The ϵ in ϵ-greedy is an adjustable parameter which determines the probability of taking a random, rather than principled, action. Due to its simplicity and surprising power, this approach has become the defacto technique for most recent reinforcement learning algorithms, including DQN and its variants.
+
+
+**Implementation**:
+```
+e = 0.1
+if np.random.randint(1)< e:
+    action = env.action_space.sample()
+else:
+    Q_dist = sess.run(Q_out,feed_dict={inputs:[state]})
+    action = np.argmax(Q_dist)
+```
+
+![Greedy](/assets/e-greedy.png)
+
+In the above figure, each value corresponds to the Q-value for a given action at a random state in an environment. The height of the light blue bar corresponds to the probability of choosing a given action. The dark blue bar corresponds to a chosen action.
+
+
 ### 1. CartPole
 #### Description:
 A pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. 
