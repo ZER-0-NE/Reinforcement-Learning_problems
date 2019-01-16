@@ -32,6 +32,23 @@ action = np.argmax(Q_value)
 
 ![Greedy](/assets/greedy_exp.png)
 
+In the above figure, each value corresponds to the Q-value for a given action at a random state in an environment. The height of the light blue bar corresponds to the probability of choosing a given action. The dark blue bar corresponds to a chosen action.
+
+
+#### 1. Random Approach:
+The opposite to the greedy approach is to always take a random action.
+
+**Implementation**:
+```
+# assuming OpenAI gym environment
+action = env.action_space.sample()
+
+action = np.random.randint(0, total_actions)
+```
+
+![Greedy](/assets/random_exp.png)
+
+In the above figure, each value corresponds to the Q-value for a given action at a random state in an environment. The height of the light blue bar corresponds to the probability of choosing a given action. The dark blue bar corresponds to a chosen action.
 ### 1. CartPole
 #### Description:
 A pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. 
