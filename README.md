@@ -143,7 +143,9 @@ The **Q-Learning algorithm**, in its simplest implementation, is a table of valu
 We start by initializing the table uniformly with all zeros, and then as we observe the rewards we obtain for various actions, we update the table accordingly.
 We make updates to our Q-table using the **Bellman equation**, which states that **the expected long-term reward for a given action is equal to the immediate reward from the current action combined with the expected reward from the best future action taken at the following state**.
 
-![FrozenLake](/assets/frozenlake.png)
+
+![Bellman](/assets/bellman_eq.png)
+
 
 #### Parameters:
 - episodes - the number of games we want the agent to play.
@@ -152,3 +154,4 @@ We make updates to our Q-table using the **Bellman equation**, which states that
 - epsilon_decay - we want to decrease the number of explorations as it gets good at playing games.
 - epsilon_min - we want the agent to explore at least this amount.
 
+![FrozenLake](/assets/frozenlake.png)
