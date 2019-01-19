@@ -177,6 +177,7 @@ REWARDS:
 - The episode ends after killing the monster or on timeout.
 - living reward = -1
 
+Use [this](https://github.com/mwydmuch/ViZDoom/blob/master/doc/Building.md) to install doom environment in your machine.
 
 #### Hyperparameters:
 
