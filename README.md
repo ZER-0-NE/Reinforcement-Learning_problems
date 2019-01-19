@@ -159,7 +159,7 @@ We make updates to our Q-table using the **Bellman equation**, which states that
 - epsilon_min - we want the agent to explore at least this amount.
 
 
-### 1. Playing Doom
+### 3. Playing Doom
 
 ![Doom](/assets/doom.png)
 
