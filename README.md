@@ -140,6 +140,10 @@ you reach the goal and zero otherwise.
 
 The **Q-Learning algorithm**, in its simplest implementation, is a table of values for every state(row) and action(column) in an environment. Within each cell of the table, we learn how good it is for an agent to take a given action within a given state. In FrozenLake environment, we have 16 possible states(one for each block), and 4 possible actions(the four directions of movement), giving us a 16x4 table of values.
 
+
+![FrozenLake](/assets/frozenlake.png)
+
+
 We start by initializing the table uniformly with all zeros, and then as we observe the rewards we obtain for various actions, we update the table accordingly.
 We make updates to our Q-table using the **Bellman equation**, which states that **the expected long-term reward for a given action is equal to the immediate reward from the current action combined with the expected reward from the best future action taken at the following state**.
 
@@ -154,4 +158,31 @@ We make updates to our Q-table using the **Bellman equation**, which states that
 - epsilon_decay - we want to decrease the number of explorations as it gets good at playing games.
 - epsilon_min - we want the agent to explore at least this amount.
 
-![FrozenLake](/assets/frozenlake.png)
+
+### 1. Playing Doom
+
+![Doom](/assets/doom.png)
+
+
+#### Description:
+- A monster is spawned randomly somewhere along the opposite wall.
+- The player can only go left/right and shoot.
+- 1 hit is enough to kill the monster.
+- Episode finishes when the monster is killed or on timeout (300). 
+
+REWARDS:
+
+- +101 for killing the monster.
+- -5 for missing.
+- The episode ends after killing the monster or on timeout.
+- living reward = -1
+
+
+#### Hyperparameters:
+
+- episodes - the number of games we want the agent to play.
+- gamma - aka decay or discount rate, to calculate the future discounted reward.
+- epsilon - aka exploration rate, this is the rate in which an agent randomly decides its action rather than prediction.
+- epsilon_decay - we want to decrease the number of explorations as it gets good at playing games.
+- epsilon_min - we want the agent to explore at least this amount.
+- learning_rate - Determines how much a neural net learns in each iteration.
