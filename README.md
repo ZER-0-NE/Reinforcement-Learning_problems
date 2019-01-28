@@ -141,7 +141,9 @@ you reach the goal and zero otherwise.
 The **Q-Learning algorithm**, in its simplest implementation, is a table of values for every state(row) and action(column) in an environment. Within each cell of the table, we learn how good it is for an agent to take a given action within a given state. In FrozenLake environment, we have 16 possible states(one for each block), and 4 possible actions(the four directions of movement), giving us a 16x4 table of values.
 
 
-![FrozenLake](/assets/frozenlake.png)
+<p align="center">
+  <img  src=/assets/frozenlake.png>
+</p>
 
 
 We start by initializing the table uniformly with all zeros, and then as we observe the rewards we obtain for various actions, we update the table accordingly.
