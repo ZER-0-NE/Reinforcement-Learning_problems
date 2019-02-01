@@ -91,6 +91,12 @@ Consider a learning agent, in an environment (eg., Breakout Game). The environme
 
 The agent can perform certain actions in the environment (eg., move the paddle to left or right). These actions sometimes result in a reward (eg., increase in score). Actions transform the environment and lead to a new state, where the agent can perform another action, and so on. The rules for how you are going to choose these actions are called **policy**. The environment is general is stochastic, which means the next state is somewhat random (rg., when you lose a ball and start afresh).
 
+The set of states and actions, together with rules for transitioning from one state to another and for getting rewards, make up a Markov decision process. One episode of this process (e.g. one game) forms a finite sequence of states, actions and rewards:
+
+s0,a0,r1,s1,a1,r2,s2,…,sn−1,an−1,rn,sn
+
+Here si represents the state, ai is the action and ri+1 is the reward after performing the action. The episode ends with terminal state sn (e.g. “game over” screen). A Markov decision process relies on the Markov assumption, that the probability of the next state si+1 depends only on current state si and performed action ai, but not on preceding states or actions.
+
 
 ### 1. CartPole
 #### Description:
