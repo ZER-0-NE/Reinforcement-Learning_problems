@@ -71,6 +71,25 @@ else:
 In the above figure, each value corresponds to the Q-value for a given action at a random state in an environment. The height of the light blue bar corresponds to the probability of choosing a given action. The dark blue bar corresponds to a chosen action.
 
 
+Q-learning attempts to solve the credit assignment problem – it propagates rewards back in time, until it reaches the crucial decision point which was the actual cause for the obtained reward. Touching on the exploration-exploitation dilemma,  we firstly observe, that when a Q-table or Q-network is initialized randomly, then its predictions are initially random as well. If we pick an action with the highest Q-value, the action will be random and the agent performs crude “exploration”. As a Q-function converges, it returns more consistent Q-values and the amount of exploration decreases. So one could say, that Q-learning incorporates the exploration as part of the algorithm. But this exploration is “greedy”, it settles with the first effective strategy it finds.
+
+A simple and effective fix for the above problem is ε-greedy exploration – with probability ε choose a random action, otherwise go with the “greedy” action with the highest Q-value. [DeepMind](https://deepmind.com/) in their [system](http://arxiv.org/abs/1312.5602) actually decreases ε over time from 1 to 0.1 – in the beginning the system makes completely random moves to explore the state space maximally, and then it settles down to a fixed exploration rate.
+
+
+
+#### Markov Decision Process: 
+
+**We generalize any reinforcement learning problem in its simplest form as Markov Decision Process (MDP).**
+
+Consider a learning agent, in an environment (eg., Breakout Game). The environment is in a certain state(location of the paddle, location and direction of the ball, existence of every brick and so on). 
+
+<p align = "center">
+<img  src=/assets/MDP.png>
+</p>
+
+The agent can perform certain actions in the environment (eg., move the paddle to left or right). These actions sometimes result in a reward (eg., increase in score). Actions transform the environment and lead to a new state, where the agent can perform another action, and so on. The rules for how you are going to choose these actions are called **policy**. The environment is general is stochastic, which means the next state is somewhat random (rg., when you lose a ball and start afresh).
+
+
 ### 1. CartPole
 #### Description:
 A pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. 
