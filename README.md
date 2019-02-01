@@ -83,7 +83,7 @@ A simple and effective fix for the above problem is ε-greedy exploration – wi
 
 Consider a learning agent, in an environment (eg., Breakout Game). The environment is in a certain state(location of the paddle, location and direction of the ball, existence of every brick and so on). 
 
-<p align = "center">
+<p align="center">
 <img  src=/assets/MDP.png>
 </p>
 
