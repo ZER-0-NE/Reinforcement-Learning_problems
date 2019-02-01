@@ -83,12 +83,11 @@ A simple and effective fix for the above problem is ε-greedy exploration – wi
 
 Consider a learning agent, in an environment (eg., Breakout Game). The environment is in a certain state(location of the paddle, location and direction of the ball, existence of every brick and so on). 
 
-<p align="left">
+<p align="center">
 <img  src=/assets/RL.jpg>
-</p>
-<p align="right">
 <img  src=/assets/MDP.png>
 </p>
+
 
 The agent can perform certain actions in the environment (eg., move the paddle to left or right). These actions sometimes result in a reward (eg., increase in score). Actions transform the environment and lead to a new state, where the agent can perform another action, and so on. The rules for how you are going to choose these actions are called **policy**. The environment is general is stochastic, which means the next state is somewhat random (rg., when you lose a ball and start afresh).
 
