@@ -7,6 +7,8 @@ The **OpenAI gym** provides many standard environments for people to test their 
 
 **All reinforcement learning algorithms tend to maximize the reward over its whole time of learning. But how an agent chooses an action to maximize the reward varies differently and there are several approaches.**
 
+Though the idea seems quite intuitive, in practice there are many challenges. It's imperative to know which of the earlier actions were actually responsible for getting the reward and to what extent. This is called the **Credit-Assignment Problem**. Once you have figured out a strategy to collect a certain number of rewards, should we stick with it or experiment with something that could result in even bigger rewards.
+
 We need to successfully balance the  **exploration** and
 **exploitation** tradeoff. Ideally, an approach should encourage exploration until the point it has learned enough about it to make informed decisions in the environment by taking optimal actions.
 
