@@ -103,7 +103,25 @@ To perform well in the long term, we need to not only take into account the imme
 
 Given one run of Markov Decision Process, we can calcualte the total reward for one episode:
 
-`R=r1+r2+r3+…+rn`
+R=r1+r2+r3+…+rn
+
+Given that, the total future reward from time point t onward can be expressed as:
+
+Rt=rt+rt+1+rt+2+…+rn
+
+But because our environment is stochastic, we can never be sure, if we will get the same rewards the next time we perform the same actions. The more into the future we go, the more it may diverge. For that reason **it is common to use discounted future reward instead**:
+
+Rt=rt+γrt+1+γ2rt+2…+γn−trn
+
+Here γ is the discount factor between 0 and 1 – the more into the future the reward is, the less we take it into consideration. It is easy to see, that discounted future reward at time step t can be expressed in terms of the same thing at time step t+1:
+
+Rt=rt+γ(rt+1+γ(rt+2+…))=rt+γRt+1
+
+If we set the discount factor γ=0, then our strategy will be short-sighted and we rely only on the immediate rewards. If we want to balance between immediate and future rewards, we should set discount factor to something like γ=0.9. If our environment is deterministic and the same actions always result in same rewards, then we can set discount factor γ=1.
+
+**A good strategy for an agent would be to always choose an action, that maximizes the discounted future reward.**
+
+
 
 
 ### 1. CartPole
