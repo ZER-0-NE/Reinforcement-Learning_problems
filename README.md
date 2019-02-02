@@ -97,6 +97,14 @@ s0,a0,r1,s1,a1,r2,s2,…,sn−1,an−1,rn,sn
 
 Here si represents the state, ai is the action and ri+1 is the reward after performing the action. The episode ends with terminal state sn (e.g. “game over” screen). A Markov decision process relies on the Markov assumption, that the probability of the next state si+1 depends only on current state si and performed action ai, but not on preceding states or actions.
 
+#### Discounted Future award:
+
+To perform well in the long term, we need to not only take into account the immediate awards but also the future rewards we are going to get.
+
+Given one run of Markov Decision Process, we can calcualte the total reward for one episode:
+
+`R=r1+r2+r3+…+rn`
+
 
 ### 1. CartPole
 #### Description:
