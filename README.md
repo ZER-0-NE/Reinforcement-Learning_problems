@@ -123,6 +123,24 @@ If we set the discount factor γ=0, then our strategy will be short-sighted and 
 
 #### How are CNN used in Reinforcement Learning?
 
+Neural Networks are the agent tha tries to learn the mapping from state-action pairs to rewards. In reinforcement learning, CNN can be used to recognize an agent's state, eg., the screen that mario is on or the terrain before a drone. They typically perform the image recognition task but, differently here. 
+
+In normal supervised learning, they map names to pixels. It will rank the labels that best fit the image in terms of their probabilities.
+
+<p align="center">
+  <img  src=/assets/conv.png>
+</p>
+
+Here in RL, they derive different representations from images. Given an image that represents a state, a convolutional net can rank the actions possible to perform in that state, for eg., it might predict that jumping will score them 7 points rather than running right.
+
+
+<p align="center">
+  <img  src=/assets/conv_rl.png>
+</p>
+
+
+The above image illustrates what a policy agent does, mapping a state to the best action.
+
 
 ### 1. CartPole
 #### Description:
