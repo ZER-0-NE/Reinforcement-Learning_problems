@@ -121,7 +121,7 @@ If we set the discount factor γ=0, then our strategy will be short-sighted and 
 
 **A good strategy for an agent would be to always choose an action, that maximizes the discounted future reward.**
 
-
+#### How are CNN used in Reinforcement Learning?
 
 
 ### 1. CartPole
